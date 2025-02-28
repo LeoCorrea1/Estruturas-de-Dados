@@ -49,3 +49,5 @@ public class Aula2 {
         System.out.println("TOTAL DE " +lista.size() + "numeros\n\n");
     }
 }
+
+//add() , suze(), contains(), sort() . 
