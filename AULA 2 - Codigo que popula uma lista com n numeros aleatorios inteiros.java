@@ -8,7 +8,7 @@ public class Aula2 {
         // Codigo que popula uma lista com números aleatórios inteiros
         ArrayList<Integer> lista = new ArrayList<>();
         Random gerador = new Random();
-        int tamanho = gerador.nextInt(10, 20);  // Tamanho da lista (entre 10 e 19)
+        int tamanho = gerador.nextInt(10, 15);  // Tamanho da lista (entre 10 e 19)
         int numero;
 
         // Inserir números aleatórios na lista
@@ -23,12 +23,12 @@ public class Aula2 {
         lista.sort(null);
         
         // Exibir por índices
-        System.out.println("EXIBINDO POR ÍNDICES");
-        for (int i = 0; i < lista.size(); i++) {
-            System.out.println(lista.get(i));
-            
-        }
-        System.out.println("TOTAL DE " +lista.size() + "numeros\n\n");
+		
+		  System.out.println("EXIBINDO POR ÍNDICES"); for (int i = 0; i < lista.size();
+		  i++) { System.out.println(lista.get(i));
+		  
+		  } System.out.println("TOTAL DE " +lista.size() + "numeros\n\n");
+		 
 
         // Exibir por objetos
         System.out.println("EXIBINDO POR OBJETOS");
@@ -39,15 +39,41 @@ public class Aula2 {
         System.out.println("TOTAL DE " +lista.size() + "numeros\n\n");
         
         // Exibir usando Iterator
-        System.out.println("USANDO ITERATOR");
-        Iterator<Integer> iterator = lista.iterator();
-        
-        while (iterator.hasNext()) {
-            numero = iterator.next();
-            System.out.println(numero);
-        }
-        System.out.println("TOTAL DE " +lista.size() + "numeros\n\n");
+		
+		  System.out.println("USANDO ITERATOR"); Iterator<Integer> iterator =
+		  lista.iterator();
+		  
+		  while (iterator.hasNext()) { numero = iterator.next();
+		  System.out.println(numero); } System.out.println("TOTAL DE " +lista.size() +
+		  "numeros\n\n");
+		 
+    
+			if(lista.remove((Integer)145)){
+				System.out.println("\n\nnumero localizado e excluido");
+			}else {
+				System.out.println("\n\nNumero nao localizado");
+			}
+			
+		//percorrer
+			for(int i = 0; i < lista.size(); i++) {
+				if(lista.get(i) % 2 != 0) {
+					lista.set(i,-1);
+				
+				}
+			}
+			System.out.println("EXIBINDO POR OBJETOS ALTERANDO NUMEROS IMPARES PARA -1");
+			System.out.println("TOTAL DE " +lista.size() + "numeros\n\n");
+	        for (Integer i : lista) {
+	            System.out.println(i);
+	            
+	        }
+	       
+			
+			
     }
 }
+		
+		
+
 
 //add() , suze(), contains(), sort() . 
