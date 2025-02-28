@@ -1,0 +1,21 @@
+package lista1;
+import java.util.ArrayList;
+import java.util.Random;
+
+public class Lista {		
+    public static void main(String[] args) {
+        //codigo que popula uma lista com n numeros aleatorios inteiros
+        ArrayList<Integer> lista = new ArrayList<>();
+        
+        Random gerador = new Random();
+        int tamanho = gerador.nextInt(10,20);
+        int numero;
+        //inserir
+        for(int i = 0; i < tamanho ; i++) {
+            numero = gerador.nextInt(1000);
+            lista.add(numero);  
+        }
+        //exibir
+        System.out.println(lista);
+    }
+}
