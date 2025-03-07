@@ -1,0 +1,46 @@
+----------------------------------------------------------
+1) EM C# exercicios dos nomes
+2) Java e C#
+-GERAR VALORES DE GLICEMIA ALEATORIOS ENTRE 50 E 240 - n valores 
+a) Aplicar a media
+b)Aplicar a mediana - ordenar - capturar o valor do meio
+c) Aplicar a moda
+----------------------------------------------------------
+
+EXEMPLO DE PERCORRER E EXIBIR EM C#
+
+//GERAR NUMEROS ALEATORIOS EM C#
+
+List<int> lista = new List<int>();
+Random gerador = new Random();
+
+int quantidade = gerador.Next(20);
+
+for (int j = 0; j < quantidade; j++)
+{
+ lista.Add(gerador.Next(50,240));
+}
+
+lista.Sort();
+
+//EXIBIR USANDO VAR
+var i = lista.GetEnumerator();
+while (i.MoveNext())
+{
+    int numero = i.Current;
+    Console.WriteLine(numero);
+}
+
+//EXIBIR USANDO FOREACH
+
+foreach(var i in lista)
+{
+console.write.line(i);
+}
+
+//EXIBIR USANDO INDICE
+for(int i = 0 ; i< lista.count ; i ++)
+{
+console.writeLine(lista[i]);
+}
+
