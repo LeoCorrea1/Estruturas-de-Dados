@@ -1,64 +1,48 @@
-package ExercicioLista;
+import java.util.HashMap;
+import java.util.Map;
 
-import java.util.ArrayList;
+public class DoisDicionariosComHashMap {
 
-public class ListaCursoSemNome {
-	
     public static void main(String[] args) {
+        // Criação do primeiro HashMap para armazenar nomes e idades
+        Map<String, Integer> dicionario1 = new HashMap<>();
         
-    	ArrayList<ArrayList<String>> CienciaComputacao = new ArrayList<>();
-    	
-        // 0 - ESTRUTURA DE DADOS
-        CienciaComputacao.add(new ArrayList<String>());
-        
-        // 1 - BANCO DE DADOS
-        CienciaComputacao.add(new ArrayList<String>());
-        
-        // 2 - IA
-        CienciaComputacao.add(new ArrayList<String>());
-        
-        CienciaComputacao.get(0).add("Luiza");
-        CienciaComputacao.get(0).add("Andrisa");
-        CienciaComputacao.get(0).add("Ceretta");
-        CienciaComputacao.get(0).sort(null); 
-        
-        CienciaComputacao.get(1).add("Luiza");
-        CienciaComputacao.get(1).add("Miguel");
-        CienciaComputacao.get(1).add("Ceretta");
-        CienciaComputacao.get(1).sort(null); 
-        
-        CienciaComputacao.get(2).add("Luiza");
-        CienciaComputacao.get(2).add("Joao");
-        CienciaComputacao.get(2).add("Leonardo");
-        CienciaComputacao.get(2).sort(null); 
-        
-        System.out.println("Alunos de Estrutura de Dados: " + CienciaComputacao.get(0));
-        System.out.println("Alunos de Banco de dados: " + CienciaComputacao.get(1));
-        System.out.println("Alunos de IA: " + CienciaComputacao.get(2));
-        
-        System.out.println("\nlistando os alunos das disciplinas");
-        ArrayList<String> nomesAvaliados = new ArrayList<>();
-        String NomeTMP;
-        int i;
+        // Criação do segundo HashMap para armazenar nomes e idades
+        Map<String, Integer> dicionario2 = new HashMap<>();
 
-        for (ArrayList disciplina : CienciaComputacao) {
-            for (Object aluno : disciplina) {
-                NomeTMP = aluno.toString();
+        // Adicionando nomes e idades ao primeiro dicionário (dicionario1)
+        dicionario1.put("João", 25);
+        dicionario1.put("Maria", 30);
+        dicionario1.put("Pedro", 22);
 
-                if (!nomesAvaliados.contains(NomeTMP)) {
-                    i = 0;
-                    for (ArrayList d : CienciaComputacao) {
-                        for (Object a : d) {
-                            if (NomeTMP.equals(a.toString())) {
-                                i++;
-                            }
-                        }
-                    }
-                    System.out.println(NomeTMP + ": " + i +" Disciplina(s)");
-                    nomesAvaliados.add(NomeTMP);
-                }
-            }
+        // Adicionando nomes e idades ao segundo dicionário (dicionario2)
+        dicionario2.put("Ana", 28);
+        dicionario2.put("Lucas", 35);
+        dicionario2.put("Fernanda", 26);
+
+        // Imprimindo o conteúdo do primeiro dicionário (dicionario1)
+        System.out.println("Conteúdo do Dicionário 1:");
+        for (Map.Entry<String, Integer> entry : dicionario1.entrySet()) {
+            System.out.println(entry.getKey() + ": " + entry.getValue() + " anos");
+        }
+
+        // Imprimindo o conteúdo do segundo dicionário (dicionario2)
+        System.out.println("\nConteúdo do Dicionário 2:");
+        for (Map.Entry<String, Integer> entry : dicionario2.entrySet()) {
+            System.out.println(entry.getKey() + ": " + entry.getValue() + " anos");
+        }
+
+        // Buscando e imprimindo a idade de uma pessoa em ambos os dicionários
+        System.out.println("\nIdade de João (Dicionário 1): " + dicionario1.get("João"));
+        System.out.println("Idade de Ana (Dicionário 2): " + dicionario2.get("Ana"));
         
+        // Verificando se uma pessoa está no primeiro ou no segundo dicionário
+        if (dicionario1.containsKey("Maria")) {
+            System.out.println("\nMaria está no Dicionário 1.");
+        }
+
+        if (dicionario2.containsKey("Lucas")) {
+            System.out.println("Lucas está no Dicionário 2.");
         }
     }
 }
