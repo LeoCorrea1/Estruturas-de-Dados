@@ -40,25 +40,32 @@ public class Nomes {
                 email = vetorNome[0] + "." + vetorNome[vetorNome.length - 1] + "@ufn.edu.br";
                 email = email.toLowerCase();
 
-
                 if (vetorNome.length < 2) {
                     System.out.println("NOME INCOMPLETO, INSIRA NOVAMENTE");
                 }
 
-                if (nomesEmails.containsKey(email)) {
-
-                    email = vetorNome[0] + "." + vetorNome[vetorNome.length - 1] + "2@ufn.edu.br";
+                int j = 1; 
+                String emailComNumero = email; 
+                while (nomesEmails.containsKey(emailComNumero)) {
+                    emailComNumero = vetorNome[0] + "." + vetorNome[vetorNome.length - 1] + (j+1) + "@ufn.edu.br";
+                    emailComNumero = emailComNumero.toLowerCase();
+                    j++;
                 }
+
+                email = emailComNumero; 
+
             } while (vetorNome.length < 2 || nomesEmails.containsKey(email));
 
             ArmazenarNomeEmail armazenar = new ArmazenarNomeEmail(nomeCompleto, email);
-            nomesEmails.put(email, armazenar);
-            
+            nomesEmails.put(email, armazenar);  
+
         }
 
         System.out.println("\nInformações armazenadas no dicionário:");
         for (ArmazenarNomeEmail entry : nomesEmails.values()) {
             entry.imprimir();
         }
+
+        teclado.close(); 
     }
 }
