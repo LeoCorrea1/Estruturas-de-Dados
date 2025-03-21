@@ -46,7 +46,8 @@ public class Nomes {
                 }
 
                 if (nomesEmails.containsKey(email)) {
-                    System.out.println("NOME JÁ INSERIDO, INSIRA OUTRO NOME");
+
+                    email = vetorNome[0] + "." + vetorNome[vetorNome.length - 1] + "2@ufn.edu.br";
                 }
             } while (vetorNome.length < 2 || nomesEmails.containsKey(email));
 
