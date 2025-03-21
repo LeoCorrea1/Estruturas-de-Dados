@@ -30,24 +30,25 @@ public class Nomes {
 
         String nomeCompleto;
         String vetorNome[];
+        String email;
+        
         for (int i = 0; i < qtd; i++) {
             do {
                 System.out.println("NOME COMPLETO: ");
                 nomeCompleto = teclado.nextLine();
                 vetorNome = nomeCompleto.split(" ");
+                email = vetorNome[0] + "." + vetorNome[vetorNome.length - 1] + "@ufn.edu.br";
+                email = email.toLowerCase();
+
 
                 if (vetorNome.length < 2) {
                     System.out.println("NOME INCOMPLETO, INSIRA NOVAMENTE");
                 }
 
-                if (nomesEmails.containsKey(nomeCompleto)) {
+                if (nomesEmails.containsKey(email)) {
                     System.out.println("NOME JÁ INSERIDO, INSIRA OUTRO NOME");
                 }
-            } while (vetorNome.length < 2 || nomesEmails.containsKey(nomeCompleto));
-
-
-            String email = vetorNome[0] + "." + vetorNome[vetorNome.length - 1] + "@ufn.edu.br";
-            email = email.toLowerCase();
+            } while (vetorNome.length < 2 || nomesEmails.containsKey(email));
 
             ArmazenarNomeEmail armazenar = new ArmazenarNomeEmail(nomeCompleto, email);
             nomesEmails.put(email, armazenar);
