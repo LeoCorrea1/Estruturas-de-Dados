@@ -5,8 +5,8 @@ import java.util.Scanner;
 
 public class Aluno {
 
-    private String nome;
-    private int matricula;
+    public String nome;
+    public int matricula;
     public String email;
 
     public Aluno(int matricula, String nome) {
