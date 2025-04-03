@@ -9,3 +9,4 @@ Criar estruturas de dados não lineares do tipo árvores utilizadas em programa�
 Unidade 4 - Grafos
 Gerar estruturas de dados não lineares do tipo grafo utilizadas em programação de maneira útil.
 
+Em Java, trim() é um método da classe String que remove os espaços em branco do início e do fim de uma string, retornando uma nova string sem esses espaços.
