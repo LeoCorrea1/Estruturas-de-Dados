@@ -3,6 +3,21 @@ package Estudo.EstruturaDados09_05;
 import java.util.ArrayList;
 import java.util.Random;
 
+class Aluno {
+    int matricula;
+    String nome;
+
+    public Aluno(int matricula, String nome) {
+        this.matricula = matricula;
+        this.nome = nome;
+    }
+    @Override
+    public String toString() {
+        return "Aluno{" + "matricula=" + matricula + ", nome='" + nome + "'}";
+    }
+}
+
+
 public class ListaRecursiva {
 
     static Random random = new Random();
