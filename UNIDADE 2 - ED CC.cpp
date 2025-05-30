@@ -82,6 +82,7 @@ void exibirComuns(celula* lista1, celula* lista2) {
     }
 }
 
+//COPIADO DO CHAT DO TEAMS
 celula* remover(int dado, celula* lista) {
     celula* p, * pR;
     for (p = lista, pR = NULL; p != NULL; pR = p, p = p->prox) {
@@ -99,6 +100,7 @@ celula* remover(int dado, celula* lista) {
     return lista;
 }
 
+//COPIADO DO CHAT DO TEAMS
 celula* RemoverPares(celula* lista) {
     celula* p = lista;
 
