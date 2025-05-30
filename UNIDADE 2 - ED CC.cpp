@@ -9,6 +9,8 @@ typedef struct no {
     struct no* prox;
 } celula;
 
+//COPIEI UMA BOA PARTE DE UM CODIGO UTILIZADO EM AULA SOBRE LISTA ( nó )
+
 celula* inserir(int dado, celula* lista) {
     celula* novo = (celula*)malloc(sizeof(celula));
     novo->dado = dado;
