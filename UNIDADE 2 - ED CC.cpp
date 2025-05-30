@@ -56,6 +56,7 @@ int contarNumero(int dado, celula* lista) {
     return contadora;
 }
 
+//reaproveitei do codigo utilizado em aula ( NÓ ) 
 void Ordenarlista3(celula* lista) {
     bool trocou;
     do {
